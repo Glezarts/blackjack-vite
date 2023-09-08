@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>Blackjack - Vite App</title>
+</head>
+
+<body>
+  <header class="title">
+    Blackjack
+  </header>
+
+  <div class="row mt-2 mx-0">
+    <div class="col text-center">
+      <button id="btnNewGame" class="btn btn-danger">Nuevo juego</button>
+      <button id="btnAsk" disabled="disabled" class="btn btn-primary">Pedir carta</button>
+      <button id="btnStopGame" disabled="disabled" class="btn btn-primary">Detener</button>
+    </div>
+  </div>
+  <div class="row container">
+    <div class="col">
+      <h1>Jugador 1 - <small>0</small></h1>
+      <div id="jugador-carta" class="divCartas">
+      </div>
+    </div>
+  </div>
+
+  <div class="row container mt-4">
+    <div class="col">
+      <h1>Máquina - <small>0</small></h1>
+      <div id="maquina-carta" class="divCartas">
+      </div>
+    </div>
+  </div>
+
+  <div id="mensaje" class="mensaje">
+    <h3 class="text"></h3>
+    <button id="btn-mensaje" class="btn btn-success disclaimer">Aceptar</button>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
