@@ -7,11 +7,9 @@ const modulo = (() => {
     let deck = [];
     const tipos = ['C', 'D', 'H', 'S'],
         especiales = ['A', 'J', 'Q', 'K'];
-
-    let puntosJugadores = [],
-        mensajeGanador = '¡Enhorabuena, ganaste!',
-        mensajePerdedor = '¡Perdiste, prueba otra vez!',
-        mensajeEmpate = '¡Empate, prueba otra vez!';
+        let puntosJugadores = []; 
+        const pointsHTML = document.querySelectorAll('small');
+    
 
 
     // Referencias HTML
@@ -20,17 +18,17 @@ const modulo = (() => {
         btnStopGame = document.querySelector('#btnStopGame'),
         btnNewGame = document.querySelector('#btnNewGame');
 
-    const pointsHTML = document.querySelectorAll('small'),
-        divCartasJugadores = document.querySelectorAll('.divCartas'),
-        divMensaje = document.querySelector('.mensaje'),
+    const divMensaje = document.querySelector('.mensaje'),
         btnMensaje = document.querySelector('#btn-mensaje'),
         body = document.querySelector('body'),
         text = document.querySelector('h3');
 
+        const divCartasJugadores = document.querySelectorAll('.divCartas');
+
 
     const inicializarJuego = (numGamers = 2) => {
         deck = createDeck(tipos, especiales);
-        puntosJugadores = [];
+        let puntosJugadores = [];
         for (let i = 0; i < numGamers; i++) {
             puntosJugadores.push(0);
             pointsHTML.forEach(elem => elem.innerText = 0);
